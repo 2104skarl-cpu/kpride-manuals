@@ -331,7 +331,8 @@ window.__CONTENT = {
 };
 </script>
 
-<script>const Easing = {
+<script>(function(){
+const Easing = {
   linear: t => t,
   easeOutCubic: t => --t * t * t + 1,
   easeInCubic: t => t * t * t,
@@ -660,9 +661,11 @@ Object.assign(window, {
   SpriteContext,
   useSprite,
   Stage
-});</script>
+});
+})();</script>
 
-<script>const {
+<script>(function(){
+const {
   Easing,
   clamp,
   interpolate,
@@ -1098,9 +1101,11 @@ Object.assign(window, {
     FloatBg,
     Sparkle
   }
-});</script>
+});
+})();</script>
 
-<script>document.getElementById('load').style.display = 'none';
+<script>(function(){
+document.getElementById('load').style.display = 'none';
 const {
   Easing,
   clamp,
@@ -2366,5 +2371,6 @@ function App() {
     }
   }, sfx ? '🔊 효과음 ON' : '🔇 효과음 OFF'));
 }
-ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(App, null));</script>
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(App, null));
+})();</script>
 </body></html>
